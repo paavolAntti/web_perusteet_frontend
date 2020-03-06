@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* Basic style for headings and paragraphs */
+h1, h2, h3, h4, h5, h6, h7, p {
+    padding-bottom: 10px; /* <-- 10px bottom padding for all */
+}
+
+/* All other divs inside this */
+.page_container {
+    width: 80%;
+	margin: 0px auto;
+
+}
+
+.profile_info {
+	border: 1px solid black;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.profile_info th {
+	text-align: left;
+	padding: 5px;
+}
+.profile_info td {
+	text-align: right;
+	padding: 5px;
+}
+
+.page_name {
+	padding: 20px;
+}
+
+
+/* Header/logo Title */
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	
+	
+}
+
+/* Style the navigation bar links */
+.navbar a {
+	color: black;
+	width: 20%;
+    padding: 14px 20px;
+    text-decoration: none;
+	text-align: center;
+	border: 1px black solid;
+	
+	
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: rgba(0, 0, 0, 0.253);
+}
+
+/* Column container */
+.row {  
+    display: flex;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    padding: 20px;
+}
+.side h2 {
+	text-align: center;
+	background: whitesmoke;
+	padding: 10px;
+}
+
+.side img {
+    width: 100%; /* <-- fill side column 100% */
+    padding-bottom: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: whitesmoke;
+}
+
+.article {
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+.article_heading {
+    display: flex;
+    justify-content: center; /* <-- one child to left, other to right */
+    border-bottom: 1px solid black;
+	margin-bottom: 10px;
+	background: whitesmoke;
+	padding: 10px;
+}
+
+.article_content {
+
+}
+
+.article_content img {
+    float: left;
+    max-width: 25%;
+    min-width: 160px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+}
+
+/* Responsive layout - when the screen is MORE than 2400px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 2400px) {
+    .page_container {
+        width: 60%;
+    }
+}
+
+/* Responsive layout - when the screen is LESS than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    
+    .page_container {
+        width: 100%;
+	}
+	.navbar a {
+		width: 100%;
+	}
+    
+    .row, .navbar {   
+        flex-direction: column;
+    }
+
+    .side {
+        text-align: center;
+    }
+    .side img {        
+        width: 50%;
+
+    }
+}
+

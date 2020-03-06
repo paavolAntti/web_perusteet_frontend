@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Harkkaprojekti</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+    </head>
+    <body>
+		
+        <div class="page_container">
+
+            <!-- Navigation Bar -->
+            <div class="navbar">
+                <a href="#">CV</a>
+                <a href="#">Projects</a>
+                <a href="index.html">Profile</a>
+				<a href="#">Contact</a>
+				<a href="blog.html">Blog</a>
+			</div>
+			<div class="page_name">
+				<h1>Blog</h1>
+			</div>
+			
+            <!-- The flexible grid (content) -->
+            <div class="row">
+                <div class="side">
+                    <h2>Personal info</h2>              
+					<img src="https://via.placeholder.com/1200">
+					<div class="profile_info">
+						<table>
+							<tr>
+								<th>Name</th>
+								<td>Antti Paavola</td>
+							</tr>
+							<tr>
+								<th>Occupation</th>
+								<td>Student</td>
+							</tr>
+							<tr>
+								<th>Degree</th>
+								<td>Null</td>
+							</tr>
+							<tr>
+								<th>Location</th>
+								<td>Kotka, FI</td>
+							</tr>
+						</table>
+					</div>
+                </div>
+                <div class="main" id='posts'>
+					<!-- Blogposts from database will generate here -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <h2>Footer</h2>
+            </div>
+		</div>
+		<script src="./node_modules/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="./scripts/blog.js"></script>
+    </body>
+</html>
