@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Harkkaprojekti</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+    </head>
+    <body>
+		
+        <div class="page_container">
+
+            <!-- Navigation Bar -->
+            <div class="navbar">
+                <a href="#">CV</a>
+                <a href="#">Projects</a>
+                <a href="index.html">Profile</a>
+				<a href="contact.html">Contact</a>
+				<a href="blog.html">Blog</a>
+			</div>
+			<div class="page_name">
+				<h1>Contact me</h1>
+			</div>
+			
+            <!-- The flexible grid (content) -->
+            <div class="row">
+                <div class="side">
+                    <h2>Personal info</h2>              
+					<img src="https://via.placeholder.com/1200">
+					<div class="profile_info">
+						<table>
+							<tr>
+								<th>Name</th>
+								<td>Antti Paavola</td>
+							</tr>
+							<tr>
+								<th>Occupation</th>
+								<td>Student</td>
+							</tr>
+							<tr>
+								<th>Degree</th>
+								<td>Null</td>
+							</tr>
+							<tr>
+								<th>Location</th>
+								<td>Kotka, FI</td>
+							</tr>
+						</table>
+					</div>
+                </div>
+                <div class="main">
+					
+                    <div class='contact'>
+						<form id="contact_form">
+							<div>
+								<h2>
+									Send me and email
+								</h2>
+							</div>
+							<h4>Your name</h4>
+							<div>
+								<input 
+								name='name'
+							/>
+							</div>
+							<h4>Your email</h4>
+							<div>
+								<input
+								name='email'
+								
+							/>
+							</div>
+							<h4>Message</h4>
+							<div>
+								<textarea
+									name='message'
+								>
+								</textarea>
+							</div>
+							<div>
+								<button type='submit'> Send it</button>
+							</div>
+						</form>
+					</div>
+                    
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <h2>Footer</h2>
+            </div>
+		</div>
+		<script src="./node_modules/axios/dist/axios.min.js"></script>
+    </body>
+</html>

@@ -110,6 +110,19 @@ h1, h2, h3, h4, h5, h6, h7, p {
     padding: 20px;
 }
 
+.contact h4 {
+	margin-top: 5px;
+}
+.contact textarea {
+	width: 80%;
+    height: 300px;
+    box-sizing: border-box;
+	resize: none; 
+	padding: 5px; 
+}
+
+
+
 /* Footer */
 .footer {
     padding: 20px;
@@ -148,7 +161,10 @@ h1, h2, h3, h4, h5, h6, h7, p {
 @media screen and (min-width: 2400px) {
     .page_container {
         width: 60%;
-    }
+	}
+	.contact textarea {
+		width: 100%;
+	}
 }
 
 /* Responsive layout - when the screen is LESS than 600px wide, make the two columns stack on top of each other instead of next to each other */
@@ -169,8 +185,10 @@ h1, h2, h3, h4, h5, h6, h7, p {
         text-align: center;
     }
     .side img {        
-        width: 50%;
-
-    }
+        max-width: 50%;
+	}
+	.contact textarea {
+		width: 100%;
+	}
 }
 
