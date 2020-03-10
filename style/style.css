@@ -1,115 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
-/* Style the body */
+/* styling the whole body with background color and same font for everything*/
 body {
-    font-family: Arial;
-    margin: 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
+	margin: 0;
+	background: #fafafa;
 }
 
-/* Basic style for headings and paragraphs */
-h1, h2, h3, h4, h5, h6, h7, p {
-    padding-bottom: 10px; /* <-- 10px bottom padding for all */
+h1, h2, h3, h4, p {
+    padding-bottom: 10px; 
 }
-
-/* All other divs inside this */
+/*container for all content 80% of the pages width*/
 .page_container {
     width: 80%;
 	margin: 0px auto;
-
-}
-
-.profile_info {
-	border: 1px solid black;
-	padding: 5px;
-	display: flex;
-	justify-content: center;
-}
-
-.profile_info th {
-	text-align: left;
-	padding: 5px;
-}
-.profile_info td {
-	text-align: right;
-	padding: 5px;
 }
 
 .page_name {
-	padding: 20px;
+	padding-left: 40px;
+	padding-top: 20px;
 }
 
-
-/* Header/logo Title */
-.header {
-    padding: 60px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-}
-
-/* Style the top navigation bar */
+/*navigation bar contains links for different sections of page*/
 .navbar {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
-	
-	
+	border-radius: 5px;
+	background: #689f38;
 }
-
-/* Style the navigation bar links */
+/*links in navbar*/
 .navbar a {
-	color: black;
+	color: white;
 	width: 20%;
     padding: 14px 20px;
     text-decoration: none;
 	text-align: center;
-	border: 1px black solid;
-	
-	
+	font-size: x-large;
 }
-
-/* Change color on hover */
+/*color changes when hovering*/
 .navbar a:hover {
-    background-color: #ddd;
-    color: rgba(0, 0, 0, 0.253);
+    background-color: rgba(174, 213, 129, 0.705);
 }
-
-/* Column container */
-.row {  
+/* class for styling all the main content in page*/
+.all_content {  
     display: flex;
 	flex-wrap: wrap;
 	margin: 20px;
 }
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-    flex: 30%;
+/* left side of the main content, takes 20% of the width*/
+.left_content {
+    flex: 20%;
     padding: 20px;
 }
-.side h2 {
+
+.left_content img {
+    width: 100%;
+	padding-bottom: 15px;
+	border-radius: 5px;
+}
+.left_header {
 	text-align: center;
-	background: whitesmoke;
+	color: white;
+	background: #689f38;
 	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+/*box for basic personal info*/
+.profile_info {
+	background: #689f38;
+	border-radius: 5px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	color:white
 }
 
-.side img {
-    width: 100%; /* <-- fill side column 100% */
-    padding-bottom: 20px;
+.profile_info th {
+	text-align: left;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	
 }
-
-/* Main column */
+.profile_info td {
+	text-align: left;
+	padding-left: 40px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+/*container for the changing content in right side of each page*/
 .main {
-    flex: 70%;
-    background-color: white;
+    flex: 80%;
     padding: 20px;
 }
-
+/* contact form style */
 .contact h4 {
 	margin-top: 5px;
 }
@@ -120,32 +111,45 @@ h1, h2, h3, h4, h5, h6, h7, p {
 	resize: none; 
 	padding: 5px; 
 }
-
-
-
-/* Footer */
+/*footer style here*/
 .footer {
     padding: 20px;
     text-align: center;
-    background: whitesmoke;
+	background: #689f38;
+	border-radius: 5px;
+	color: white;
+}
+
+.footer a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer a:hover {
+	color: #424242;
+}
+
+.footer i {
+	padding-right: 5px;
+	padding-left: 5px;
+	font-size: 25px;
 }
 
 .article {
 	margin-bottom: 20px;
-	padding: 5px;
 }
 
 .article_heading {
-    display: flex;
-    justify-content: center; /* <-- one child to left, other to right */
-    border-bottom: 1px solid black;
+	display: flex;
+	color: white;
+    justify-content: center;  
 	margin-bottom: 10px;
-	background: whitesmoke;
+	border-radius: 5px;
+	background: #689f38;
 	padding: 10px;
 }
-
-.article_content {
-
+.article_heading h2 {
+	border-bottom: 1px solid white;
 }
 
 .article_content img {
@@ -156,18 +160,72 @@ h1, h2, h3, h4, h5, h6, h7, p {
     padding-bottom: 20px;
 
 }
-
-/* Responsive layout - when the screen is MORE than 2400px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (min-width: 2400px) {
-    .page_container {
-        width: 60%;
-	}
-	.contact textarea {
-		width: 100%;
-	}
+.comment_container {
+	display: flex;
+	justify-content: start;
+	padding: 20px;
 }
 
-/* Responsive layout - when the screen is LESS than 600px wide, make the two columns stack on top of each other instead of next to each other */
+.comment_container h4 {
+	margin-right: 40px;
+	
+}
+/* speech bubble style for the comments of blogposts*/
+.comment_bubble {
+    background: #c5e1a5;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    max-width: 400px;
+    padding: 15px;
+    position: relative;
+}
+/*the triangle in the left of the bubble*/
+.comment_bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #c5e1a5;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+/* style for all the buttons*/
+.basic_button {
+	background: #353535;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.basic_button:hover {
+	background-color: #9e9e9e;
+}
+/* style for comment section of the blog page*/
+.comment_form {
+	display: flex;
+	flex-direction: column;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+.comment_form input {
+	width: 25%;
+}
+.comment_form textarea {
+	width: 50%;
+    height: 150px;
+    box-sizing: border-box;
+	resize: none; 
+	padding: 5px; 
+}
+/* responsive thingy, page width decreases when screen size decreases*/
 @media screen and (max-width: 800px) {
     
     .page_container {
