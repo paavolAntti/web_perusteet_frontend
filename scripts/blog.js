@@ -1,7 +1,7 @@
-const baseUrl = 'http://localhost:3003/api/posts'
+const endpoint = 'http://localhost:3003/api/posts'
 // get all posts from the database
 const getPosts = async () => {
-	const res = await axios.get(baseUrl)
+	const res = await axios.get(endpoint)
 	const posts = res.data
 	if (posts) {
 		console.log('posts: ', posts)
@@ -12,7 +12,7 @@ const getPosts = async () => {
 // Add comment to database
 const commentBlogPost = async (id, comment) => {
 	console.log('id in request', id)
-	await axios.put(`${baseUrl}/${id}`, comment)
+	await axios.put(`${endpoint}/${id}`, comment)
 }
 
 // header elemet for single blogpost
