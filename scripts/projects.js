@@ -24,6 +24,7 @@ const createProjectImage = (project) => {
 	console.log('project passed to image function', project)
 	console.log('imageurl', project.imageUrl)
 	projectImage.src = project.imageUrl
+	
 	return projectImage
 }
 
@@ -31,11 +32,20 @@ const createSingleProject = (projectContent) => {
 	const project = document.createElement('div')
 	//setting attributes to blog
 	project.setAttribute('id', projectContent.id)
-	project.appendChild(createHeader(projectContent))
-	project.appendChild(createContent(projectContent))
-	project.appendChild(createProjectLink(projectContent))
-	project.appendChild(createProjectImage(projectContent))
+	const content = document.createElement('div')
+	const left = document.createElement('div')
+	const right = document.createElement('div')
+	left.appendChild(createProjectImage(projectContent))
+	right.appendChild(createContent(projectContent))
+	right.appendChild(createProjectLink(projectContent))
+	content.appendChild(left)
+	content.appendChild(right)
+	left.className = 'project_left'
+	right.className = 'project_right'
+	content.className = 'article_content'
 	project.className='article'
+	project.appendChild(createHeader(projectContent))
+	project.appendChild(content)
 	
 	return project
 }

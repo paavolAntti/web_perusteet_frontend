@@ -138,6 +138,33 @@ h1, h2, h3, h4, p {
 .article {
 	margin-bottom: 20px;
 }
+.article_content {
+	display: flex;
+	flex-direction: row;
+}
+.project_left {
+	width: 40%;
+}
+
+.project_left img {
+    width: 100%;
+    padding-right: 20px;
+	padding-bottom: 20px;
+	border-radius: 5px;
+
+}
+
+.project_right {
+	width: 60%;
+}
+
+.project_right a {
+	text-decoration: none;
+	color: rgb(102, 92, 92);
+}
+.project_right a:hover {
+	color: rgb(0, 0, 0)
+}
 
 .article_heading {
 	display: flex;
@@ -152,14 +179,6 @@ h1, h2, h3, h4, p {
 	border-bottom: 1px solid white;
 }
 
-.article_content img {
-    float: left;
-    max-width: 25%;
-    min-width: 160px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-
-}
 .comment_container {
 	display: flex;
 	justify-content: start;
@@ -228,14 +247,11 @@ h1, h2, h3, h4, p {
 /* responsive thingy, page width decreases when screen size decreases*/
 @media screen and (max-width: 800px) {
     
-    .page_container {
+    .page_container, .navbar a, .contact textarea, .project_left, .project_right {
         width: 100%;
 	}
-	.navbar a {
-		width: 100%;
-	}
-    
-    .row, .navbar {   
+	
+    .row, .navbar, .article_content {   
         flex-direction: column;
     }
 
@@ -244,9 +260,6 @@ h1, h2, h3, h4, p {
     }
     .side img {        
         max-width: 50%;
-	}
-	.contact textarea {
-		width: 100%;
 	}
 }
 
